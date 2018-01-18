@@ -1,12 +1,12 @@
 const express = require("express");
+const MongoClient = require('mongodb').MongoClient;
+const url = "mongodb://localhost:27017/";
+const ObjectID = require('mongodb').ObjectID;
 
 const app = express();
 
 //mongo-db task1
 
-const MongoClient = require('mongodb').MongoClient;
-const url = "mongodb://localhost:27017/";
-const ObjectID = require('mongodb').ObjectID;
 
 MongoClient.connect(url, function(err, db) {
     if (err) throw err;
